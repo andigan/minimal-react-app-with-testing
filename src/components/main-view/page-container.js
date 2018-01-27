@@ -7,7 +7,7 @@ import Button from './button';
 import StarWarsName from './star-wars-name-container';
 import DemoBox from './demo-box.js'
 
-import styles from '../styles/page.css';
+import styles from '../../styles/page.css';
 
 class PageContainer extends Component {
     render () {

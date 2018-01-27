@@ -13,3 +13,7 @@ var server = app.listen(port, function () {
 });
 
 // Use '/' to go to index.html via static middleware
+
+app.get('/other', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});

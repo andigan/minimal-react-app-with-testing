@@ -6,11 +6,11 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 // actions
-import { setBoxColor, getLuke } from '../actions'
+import { setBoxColor, getLuke } from '../../actions'
 
 
 // styles
-import styles from '../styles/components/button.css';
+import styles from '../../styles/components/button.css';
 
 class Button extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class Button extends Component {
 
   render () {
 
-    return <div id='button' onClick={this.handleClick}> click me </div>
+    return <div id='button' onClick={this.handleClick}> click me to fetch api and change box color </div>
 
   }
 }

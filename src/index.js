@@ -3,24 +3,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // redux
-import { createStore, applyMiddleware } from 'redux';
 import { Provider }  from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 import ReduxPromise from 'redux-promise';
+
+// router
+import { Router, Route } from 'react-router-dom';
+import history from './history';
 
 // reducers
 import rootReducer from './reducers/root-reducer'
 
 // components
-import PageContainer from './components/page-container';
+import PageContainer from './components/main-view/page-container';
+import OtherContainer from './components/other-view/other-container';
 
-const store = createStore(rootReducer, composeWithDevTools(
-  applyMiddleware(ReduxPromise)
-));
+// redux store
+import { composeReduxStore } from './store';
+
+var store = composeReduxStore("main");
 
 ReactDOM.render(
   <Provider store={store}>
-    <PageContainer />
+    <Router history={history}>
+      <div>
+        <Route exact path="/" component={PageContainer}/>
+        <Route path="/other" component={OtherContainer}/>
+      </div>
+     </Router>
   </Provider>, document.getElementById('app')
 );

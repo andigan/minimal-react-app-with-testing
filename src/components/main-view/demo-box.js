@@ -2,9 +2,11 @@
 import React, { Component } from 'react';
 
 // components
-import TextFormField from './inputs/text-form-field';
+import TextFormField from '../inputs/text-form-field';
 
-import styles from '../styles/components/demo-box.css';
+import styles from '../../styles/components/demo-box.css';
+
+import history from '../../history';
 
 class DemoBox extends Component {
   constructor() {
@@ -40,6 +42,22 @@ class DemoBox extends Component {
 
 
       <TextFormField processChange={this.handleTextFormFieldChange} processSubmit={this.handleTextFormFieldSubmit}/>
+
+      <div
+        style={{
+          backgroundColor: "lightblue",
+          height: "30px",
+          width: "500px",
+          marginTop: "30px"
+        }}
+        onClick={() => {
+          history.push('/other');
+        }}>
+        click to use react router and history to switch to /other view
+      </div>
+
+
+
     </div>
   }
 }

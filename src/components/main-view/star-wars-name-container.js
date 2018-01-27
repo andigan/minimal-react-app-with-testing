@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import styles from '../styles/components/star-wars.css';
+import styles from '../../styles/components/star-wars.css';
 
 class StarWarsName extends Component {
   render () {

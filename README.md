@@ -1,15 +1,18 @@
 
 A minimal react app with testing
 
+
+```npm start```
+
 ```npm run test```
 
 
 Done:
 * Basic
-* Redux With Mock Redux State
+* Component With Mock Redux State
+* Command Line control of mock redux store
 
 To Do:
-* Redux With Mock Dispatch
+* Mock Dispatch
 * Reducer
 * Actions
-* Functions

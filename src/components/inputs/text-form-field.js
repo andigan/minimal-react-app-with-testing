@@ -25,7 +25,7 @@ class TextFormField extends Component {
   render () {
 
     return <form className="text-form-field-container" onSubmit={ this.handleSubmit } onChange={ this.handleChange }>
-        <input className="input-field" type="text" ref="inputdata" placeholder="Home" />
+        <input className="input-field" type="text" ref="inputdata" placeholder="Type Here / Write to Redux Store" />
         <input type="submit" value="Submit Button" style={{display: 'none'}}/>
     </form>
 

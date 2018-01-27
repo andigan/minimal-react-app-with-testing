@@ -1,3 +1,7 @@
+// This file creates a mock dom for testing React components.
+// It is executed by the package.json test scripts.
+
+// jsdom setup
 const { JSDOM } = require('jsdom');
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');

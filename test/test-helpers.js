@@ -1,3 +1,8 @@
+// This file is executed by the package.json test scripts.
+// It defines some global variables for use within the test files.
+
+var path = require('path');
+
 // from chai-enzyme setup
 import chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
@@ -14,6 +19,7 @@ configure({ adapter: new Adapter() });
 import { expect } from 'chai';
 import { sinon, spy } from 'sinon';
 import { mount, render, shallow } from 'enzyme';
+
 import { shallowWithState } from 'enzyme-redux';
 
 global.expect = expect;
@@ -23,4 +29,4 @@ global.spy = spy;
 global.mount = mount;
 global.render = render;
 global.shallow = shallow;
-global.shallowWithState = shallowWithState
+global.shallowWithState = shallowWithState;
